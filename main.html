@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamline Products </title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" class="btn" id="homeBtn">Home</a></li>
+            <li><a href="#" class="btn" id="productsBtn">Products</a></li>
+            <li><a href="#" class="btn" id="supportBtn">Support</a></li>
+            <li><a href="#" class="btn" id="creditsBtn">Credits</a></li>
+        </ul>
+    </nav>
+    <header>
+        <!-- Add your logo here -->
+        <img src="logo.png" alt="Streamline Products Logo" id="logo">
+    </header>
+    <div class="content" id="homeContent" style="display: block;">
+        <h1>Streamline Products</h1>
+        <h1>
+            We sell high-quality and reliable Modern and Cold War Military assets and maps, ranging from Soviet-NATO. We have a large selection to choose from. Our assets are not only affordable but also of the highest quality, while still optimized. Choosing to purchase with us will improve your game and its overall quality.
+        </h1>
+        <h1>
+            Join our Discord community to stay updated: <a href="https://discord.gg/NrefkVmZyp" target="_blank">https://discord.gg/NrefkVmZyp</a>
+        </h1>
+    </div>
+    
+    
+    <div class="content" id="productsContent">
+        <h1>Our Products</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="Product1.jpg" alt="Product 1">
+                <h2>Mariupol Ukraine War Map</h2>
+                <p>Price: $7.99</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="Product2.jpg" alt="Product 2">
+                <h2>Grozny Chechen War Map</h2>
+                <p>Price: $10.99</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="Product3.jpg" alt="Product 3">
+                <h2>Generic DDR City Map</h2>
+                <p>Price: $7.99</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="supportContent">
+        <h1>Contact Support</h1>
+        <div class="email-form">
+           
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <div class="issue-type-box">
+                    <label for="issue_type">Issue Type</label>
+                    <select name="issue_type" id="issue_type" class="issue-type-select">
+                        <option value="general">General</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="billing">Product Purchase</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="bug">Bug</option>
+                    </select>
+                </div>
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="description" placeholder="Description" required></textarea>
+                <button class="btn" type="submit">Contact</button>
+          
+        </div>
+        
+        
+    </div>
+    
+    
+    <div class="content" id="creditsContent">
+        <h1>Credits</h1>
+        <img src="logo.png" alt="Credits">
+       ><h1>Alfie - Owner</h1>
+       ><h1>Mahmoud - Website Creator (Customer Service)</h1>
+    </div>
+    <script>
+        // Get references to the buttons and content divs
+        const homeBtn = document.getElementById("homeBtn");
+        const productsBtn = document.getElementById("productsBtn");
+        const supportBtn = document.getElementById("supportBtn");
+        const creditsBtn = document.getElementById("creditsBtn");
+
+        const homeContent = document.getElementById("homeContent");
+        const productsContent = document.getElementById("productsContent");
+        const supportContent = document.getElementById("supportContent");
+        const creditsContent = document.getElementById("creditsContent");
+
+        // Function to show content and hide others
+        function showContent(content) {
+            homeContent.style.display = "none";
+            productsContent.style.display = "none";
+            supportContent.style.display = "none";
+            creditsContent.style.display = "none";
+
+            content.style.display = "block";
+        }
+
+        // Add click event listeners to the buttons
+        homeBtn.addEventListener("click", () => {
+            showContent(homeContent);
+        });
+
+        productsBtn.addEventListener("click", () => {
+            showContent(productsContent);
+        });
+
+        supportBtn.addEventListener("click", () => {
+            showContent(supportContent);
+        });
+
+        creditsBtn.addEventListener("click", () => {
+            showContent(creditsContent);
+        });
+    </script>
+</body>
+</html>
