@@ -135,8 +135,8 @@ nav {
 /* Logo */
 #logo {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 10px; /* Adjust the top position */
+    left: 10px; /* Adjust the left position */
     max-width: 100px;
     height: auto;
 }
@@ -149,152 +149,29 @@ body {
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
- /* Common styles for all screen sizes */
-body, ul {
-    margin: 0;
-    padding: 0;
-}
+    nav {
+        height: auto; /* Allow the height to adjust */
+    }
 
-/* Style the navigation menu */
-nav {
-    background-color: #333;
-    text-align: center;
-    height: 100px;
-}
+    .menu {
+        padding: 10px 0;
+    }
 
-.menu {
-    list-style: none;
-    padding: 20px 0;
-}
+    .btn {
+        padding: 12px 24px; /* Adjust button padding */
+        font-size: 14px; /* Adjust font size */
+    }
 
-.menu li {
-    display: inline;
-    margin-right: 20px;
-}
+    .content {
+        padding: 10px;
+    }
 
-/* Style the buttons */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #555;
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
+    .product-card {
+        width: calc(50% - 20px);
+        margin: 0 0 20px;
+    }
 
-.btn:hover {
-    background-color: #777;
-}
-
-/* Content sections */
-.content {
-    text-align: center;
-    padding: 20px;
-    display: none;
-}
-
-/* Show the home content by default */
-#homeContent {
-    display: block;
-}
-
-/* Product container */
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-/* Product card */
-.product-card {
-    width: calc(25% - 20px);
-    border: 1px solid #ccc;
-    margin: 0 10px;
-    padding: 6px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Email form */
-#supportContent .email-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-.email-form input,
-.email-form textarea {
-    width: 100%;
-    padding: 20px;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.email-form button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 20px 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-/* Issue type box */
-.issue-type-box {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 0 auto 20px;
-    color: #000;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.issue-type-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-/* Credits */
-#creditsContent {
-    text-align: center;
-}
-
-#creditsContent img {
-    max-width: 100%;
-}
-
-/* Logo */
-#logo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    max-width: 100px;
-    height: auto;
-}
-
-/* Set the background color to black */
-body {
-    background-color: #000;
-    color: #fff;
-}
+    #supportContent .email-form {
+        padding: 20px;
+    }
 }
